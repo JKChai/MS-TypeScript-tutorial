@@ -7,6 +7,12 @@ Completing a tutorial on TypeScript with Microsoft education: https://docs.micro
 * `module01.ts` - first exercise for the tutorial
 * `module01.html` - html component to visualize onto web browser
 * `tsconfig.json` - defines the TypeScript project settings, such as the compiler options & files to be included
+* `main.ts` - modules tutorial for import
+* `greetings_module.ts` - modules tutorial for exporting function
+* `greetings-utilities_module.ts` - modules tutorial for exporting function
+* `main.js` - modules tutorial for import transcompile from `main.ts`
+* `greetings_module.js` - modules tutorial for exporting function transcompile from `greetings_module.ts`
+* `greetings-utilities_module.js` - modules tutorial for exporting function transcompile from `greetings-utilities_module.ts`
 
 # Requirements
 
@@ -93,6 +99,7 @@ let addNumbers: Calculator = (num1, num2) => num1 + num2;
 * Structural Subtyping
 * Deconstructed Object Parameters
 * encapsulates
+* scope
 
 ## Primitive types
 
@@ -212,3 +219,26 @@ returnBoolean = returnBoolean * 100; // Error: Type 'number' not assignable to t
 ```
 
 > `generic constraint`
+
+# Modules
+
+> Scripts that contain `export` syntax are usually called modules
+>
+> To import a single export from a module:
+```TS
+import { <component name> } from '<module name>'
+```
+> To rename an import, use the `as` keyword:
+```TS
+import { <component name> as <new name> } from '<module name>'
+```
+> To import the entire module into a single variable, and use it to access the module exports:
+```TS
+import * as <variable name> from '<module name>'
+```
+>
+> Differences between JavaScript is JS uses `requires` statement, while TypeScript uses `import` statement for importing libraries
+
+# Namespaces
+
+
